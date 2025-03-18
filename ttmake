@@ -1,0 +1,19 @@
+flags=-O2 -Wall -std=c2x
+ldflags=-lbu
+
+.PHONY: all clean libbirch
+
+all: libbirch SenzuVM
+
+libbirch:
+	cd ~/Downloads/birchutils/birchutils/ && make
+
+SenzuVM: SenzuVM.o
+	cc $(flags) -o $@ $^ $(ldflags) -L~/Downloads/birchutils/birchutils
+
+SenzuVM.o: SenzuVM.c SenzuVM.h
+	cc $(flags) -c $<
+
+clean:
+	rm -f *.o SenzuVM
+
