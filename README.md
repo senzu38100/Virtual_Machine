@@ -4,7 +4,7 @@ SenzuVM is a minimalist virtual machine written in C that simulates a CPU, memor
 
 ---
 
-## *🚀 Features*
+## * Features*
 
 - *Custom CPU architecture with general-purpose registers (AX, BX, CX, DX)*
 - *Stack simulation and instruction pointer (SP, IP)*
@@ -18,7 +18,7 @@ SenzuVM is a minimalist virtual machine written in C that simulates a CPU, memor
 
 ---
 
-## *📁 File Structure*
+## * File Structure*
 
 ```
 SenzuVM/
@@ -30,7 +30,7 @@ SenzuVM/
 
 ---
 
-## *🧠 Architecture Overview*
+## * Architecture Overview*
 
 ### *VM Structure:*
 
@@ -94,7 +94,7 @@ static IM instrmap[] = {
 
 ---
 
-## *🧪 Example: Generating a Bytecode Program*
+## * Example: Generating a Bytecode Program*
 
 *In **`exampleprogram()`**, the following instructions are built:*
 
@@ -118,7 +118,7 @@ printhex((int8 *)prog, (map(mov) + map(nop)), ' ');
 
 ---
 
-## *🧰 Memory Allocation & Utilities*
+## * Memory Allocation & Utilities*
 
 - *Memory is dynamically allocated using **`malloc`*
 - *Structures are zeroed with a macro shortcut: **`zero($1 p, size)`*
@@ -126,7 +126,7 @@ printhex((int8 *)prog, (map(mov) + map(nop)), ' ');
 
 ---
 
-## *🔍 Output Example*
+## * Output Example*
 
 ```bash
 $ ./SenzuVM
@@ -143,7 +143,7 @@ prog = 0x5629acbfc2ac
 
 ---
 
-## *📌 Current Limitations*
+## * Current Limitations*
 
 - *The virtual machine does not yet execute instructions*
 - *No branching (**`JMP`**), arithmetic (**`ADD`**), or memory access operations*
@@ -151,7 +151,7 @@ prog = 0x5629acbfc2ac
 
 ---
 
-## *🎯 Future Improvements*
+## * Future Improvements*
 
 *If extended, SenzuVM could support:*
 
@@ -162,14 +162,10 @@ prog = 0x5629acbfc2ac
 
 ---
 
-## *👨‍💻 Author*
+## *👨‍ Author*
 
 *Developed by Hodeifa as a personal project to understand CPU and VM internals using pure C. This project demonstrates key system-level programming skills and can be extended in many directions depending on learning goals.*
+##  Acknowledgments
 
----
-
-## *📜 License*
-
-*MIT License — use it, modify it, break it, improve it.*
-
+Some low-level utilities and architectural inspiration were based on the work of **Dr. JB**, whose contributions to system design deeply influenced parts of this project.
 
